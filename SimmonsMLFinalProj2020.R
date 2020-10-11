@@ -754,6 +754,4 @@ summary(THE_FINAL_DATA_FRAME)
 
 
 
-### THE END. I hope you enjoyed it. Machine Learning has been [a] class. :-)
-
-## See you in Sports Analytics!! 
+### THE END. I hope you enjoyed it.
