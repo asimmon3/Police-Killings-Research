@@ -59,9 +59,13 @@ A binary classification model was created for this project using the CatBoost pa
 Rather than use the Area Under the Curve (AUC) to measure model success in training, the CatBoost model was set to measure Logarithmic Loss (LogLoss). LogLoss is actually seen as more important or explanatory than AUC in many classification problems. The LogLoss value decreases as the model is more confident on incorrect predictions. This, along with some other characteristics of the metric, make it more relevant in problems such as this one (where there is an imbalanced dataset in regard to the response variable). The model also instantly calculated the feature importance for each variable. 
 
 When used on the training dataset, the accuracy of the model was 0.6911, with the sensitivity being 0.71739. Find the confusion matrix below:
+
      0   1
+     
   0 791  26
+  
   1 357  66
+
 So, the model performed alright on the test data. The sensitivity, or the True Positive Rate, was higher than the overall accuracy of the model. That is important, as it was important that the model found as many correct cases in which a body camera would be on as possible. It was worse than initially expected, but this makes sense as predicting something that involves a lot of human interaction can be pretty difficult in some scenarios, especially in high-pressure situations that all end in someone getting killed. The most important takeaway from this model was the feature importance, and ultimately the SHAP values that were extracted from the results.  
 
 The opportunity to optimize and tune parameters through cross-validation may have allowed for a more accurate or sensitive model. Otherwise, there were not any serious encountered issues in the project or model fitting process. CatBoost is a very fast and powerful package. 
